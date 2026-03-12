@@ -32,7 +32,7 @@ tabela_final['cliente_os'] = (
     tabela_final['Cod Cliente'].astype(str) + "-" + tabela_final['Cod OS'].astype(str)
 )
 
-# 🔍 Ver quantidade antes de filtros
+# Ver quantidade antes de filtros
 print(f"Total inicial: {len(tabela_final)} linhas")
 
 
@@ -130,7 +130,8 @@ tabela_final = tabela_final[~tabela_final['Status'].isin(['Inativo'])]
                                           
 print(f"Após alterar orçamentistas orçamentistas: {len(tabela_final)} linhas")
 
-# ✅ Exibir resultado final
+# Exibir resultado final
 print(tabela_final)
+
 
 tabela_final.to_excel("tabela_filtrada_final.xlsx", index=False)
